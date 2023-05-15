@@ -8,9 +8,16 @@ const isManager = (id) => {
 };
 
 const getRelatedEmployees = (managerId) => {
-  //   if (isManager(managerId)) {
-  //     data.employees.forEach((employee) => employee.managers.filter(managers) => managers === managerId)
-  //   }
+  if (isManager(managerId)) {
+    const relatedEmployees = data.employees
+      .filter((employee) => employee.managers
+        .find((manager) => manager === managerId))
+      .map((fullName) => `${fullName.firstName} ${fullName.lastName}`);
+    return relatedEmployees;
+  }
+  if (!isManager(managerId)) {
+    throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');
+  }
 };
 
 module.exports = { isManager, getRelatedEmployees };
