@@ -27,25 +27,4 @@ const calculateEntry = (entrants) => {
   return sumPrice;
 };
 
-console.log(calculateEntry([
-  { name: 'Lara Carvalho', age: 5 },
-  { name: 'Frederico Moreira', age: 5 },
-  { name: 'Pedro Henrique Carvalho', age: 5 },
-  { name: 'Maria Costa', age: 18 },
-  { name: 'Núbia Souza', age: 18 },
-  { name: 'Carlos Nogueira', age: 50 },
-]));
-
 module.exports = { calculateEntry, countEntrants };
-
-// const sumPrice = entrants.reduce(((acc, entrant) => {
-//   if (entrantsCounter.child) {
-//     acc += (data.prices.child * entrantsCounter.child);
-//   }
-//   if (entrantsCounter.adult) {
-//     acc += (data.prices.adult * entrantsCounter.adult);
-//   }
-//   if (entrantsCounter.senior) {
-//     acc += (data.prices.senior * entrantsCounter.senior);
-//   }
-// }, 0));
