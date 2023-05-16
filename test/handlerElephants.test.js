@@ -18,4 +18,27 @@ describe('Testes da função HandlerElephants', () => {
     const expected = 10.5;
     expect(actual).toBeCloseTo(expected);
   });
+
+  it('o argumento location deve retornar a string NW', () => {
+    const actual = handlerElephants('location');
+    const expected = 'NW';
+    expect(actual).toBe(expected);
+  });
+
+  it('o argumento popularity deve retornar um número igual ou maior a 5', () => {
+    const actual = handlerElephants('popularity');
+    const expected = 5;
+    expect(actual).toBeGreaterThanOrEqual(expected);
+  });
+
+  it('o argumento availability deve retornar um array de dias da semana que não contém Monday', () => {
+    const actual = handlerElephants('availability');
+    const expected = ['Friday', 'Saturday', 'Sunday', 'Tuesday'];
+    expect(actual).toEqual(expected);
+  });
+
+  it('Não passando argumentos a função deve retornar undefined', () => {
+    const actual = handlerElephants();
+    expect(actual).toBeUndefined();
+  });
 });
