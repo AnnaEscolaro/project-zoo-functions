@@ -21,8 +21,4 @@ const countAnimals = (animals) => {
   }
 };
 
-console.log(countAnimals());
-console.log(countAnimals({ species: 'penguins' }));
-console.log(countAnimals({ species: 'giraffes', sex: 'female' }));
-
 module.exports = countAnimals;
