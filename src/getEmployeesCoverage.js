@@ -48,21 +48,4 @@ const getEmployeesCoverage = (objParameter) => {
   return formatCoverage(employeeFound);
 };
 
-//   returnObj.id = employeeFound.id;
-//   returnObj.fullName = `${employeeFound.firstName} ${employeeFound.lastName}`;
-//   const animalNames = employeeFound.responsibleFor.map((item) => data
-//     .species.find((specie) => specie.id === item))
-//     .map((el) => el.name);
-//   returnObj.species = animalNames;
-//   const location = employeeFound.responsibleFor.map((item) => data
-//     .species.find((specie) => specie.id === item))
-//     .map((el) => el.location);
-//   returnObj.locations = location;
-//   return returnObj;
-
-// console.log(getEmployeesCoverage({ name: 'Anna' }));
-// console.log(getEmployeesCoverage({ name: 'Sharonda' }));
-// console.log(getEmployeesCoverage({ id: '4b40a139-d4dc-4f09-822d-ec25e819a5ad' }));
-// console.log(getEmployeesCoverage());
-
 module.exports = getEmployeesCoverage;
