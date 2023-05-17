@@ -55,4 +55,16 @@ describe('Testes da função getOpeningHours', () => {
     const expected = 'The minutes should represent a number';
     expect(actual).toThrowError(expected);
   });
+
+  it('Para os argumentos Monday e 13:00-AM deve lançar uma exceção com a mensagem: "The hour must be between 0 and 12"', () => {
+    const actual = getOpeningHours('Monday', '13:00-AM');
+    const expected = 'The hour must be between 0 and 12';
+    expect(actual).toThrowError(expected);
+  });
+
+  it('Para os argumentos Tuesday e 09:60-AM deve lançar uma exceção com a mensagem: "The minutes must be between 0 and 59"', () => {
+    const actual = getOpeningHours('Tuesday', '09:60-AM');
+    const expected = 'The minutes must be between 0 and 59';
+    expect(actual).toThrowError(expected);
+  });
 });
