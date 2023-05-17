@@ -41,4 +41,14 @@ describe('Testes da função HandlerElephants', () => {
     const actual = handlerElephants();
     expect(actual).toBeUndefined();
   });
+
+  it('Passando por argumento um objeto vazio ({}) deve retornar a string "Parâmetro inválido, é necessário uma string"', () => {
+    const actual = handlerElephants({});
+    expect(actual).toBe('Parâmetro inválido, é necessário uma string');
+  });
+
+  it('Passada uma string que não contempla uma funcionalidade deve retornar null', () => {
+    const actual = handlerElephants('olá, boa tarde!');
+    expect(actual).toBeNull();
+  });
 });
